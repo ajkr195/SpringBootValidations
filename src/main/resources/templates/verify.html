@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Generate Java/Web Code</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous"></script>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	crossorigin="anonymous"></script>
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+	integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+	crossorigin="anonymous">
+<link th:href="@{css/main.css}" rel="stylesheet" />
+</head>
+<body>
+	<div class="container">
+		<div class="card-header bg-dark text-white p-0">
+			<div style="text-align: center">
+				<!-- 				<h4>Review Details</h4> -->
+				<h4>
+					<span th:text="#{verify.page.header}"></span>
+				</h4>
+			</div>
+		</div>
+		<br>
+		<!-- 		<p th:text="'Project Name: ' + ${project.projectname}" /> -->
+		<div class="row">
+			<label class="col-md-3" for="projectname">Project Name</label>
+			<div class="col-md-9">
+				<p th:text="${project.projectname}" />
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-md-3" for="projectpath">Project Path</label>
+			<div class="col-md-9">
+				<p th:text="${project.projectpath}" />
+			</div>
+		</div>
+
+		<div class="row">
+			<label class="col-md-3" for="projecttechnology">Project Type</label>
+			<div class="col-md-9">
+				<p th:text="${project.projecttechnology}" />
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-md-3" for="projectdatabase">Project
+				Database Type</label>
+			<div class="col-md-9">
+				<p th:text="${project.projectdatabase}" />
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-md-3" for="projectdatabasename"> Database
+				Name</label>
+			<div class="col-md-9">
+				<p th:text="${project.projectdatabasename}" />
+			</div>
+		</div>
+
+
+
+		<div class="row">
+			<label class="col-md-3" for="isjpaused">JPA Used ?</label>
+			<div class="col-md-9">
+				<p th:text="${project.isjpaused}" />
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-md-3" for="isbootstrapused">BootStrap Used
+				?</label>
+			<div class="col-md-9">
+				<p th:text="${project.isbootstrapused}" />
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-md-3" for="isdatatablesused">Datatables
+				Used ?</label>
+			<div class="col-md-9">
+				<p th:text="${project.isdatatablesused}" />
+			</div>
+		</div>
+
+		<div class="row">
+			<label class="col-md-3" for="isajaxused">AJAX Used ?</label>
+			<div class="col-md-9">
+				<p th:text="${project.isajaxused}" />
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-md-3" for="isjqueryused">JQuery Used ?</label>
+			<div class="col-md-9">
+				<p th:text="${project.isjqueryused}" />
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-md-3" for="isrestcontrollerused">Need
+				RestController ?</label>
+			<div class="col-md-9">
+				<p th:text="${project.isrestcontrollerused}" />
+			</div>
+		</div>
+
+
+		<a href="/" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i>Add
+			Another</a>
+	</div>
+</body>
+</html>
