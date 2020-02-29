@@ -6,10 +6,10 @@ import javax.validation.constraints.Size;
 
 public class Project {
 	@NotEmpty(message = "JSR Validation - Project name can not be empty.")
-	@Size(min = 4, max = 35, message = "JSR Validation - Project name must be between {2} and {1} characters.")
+	@Size(min = 4, max = 35, message = "JSR Validation - Project name must be between {min} and {max} characters.")
 	private String projectname;
 	@NotEmpty(message = "JSR Validation - Project path can not be empty.")
-	@Size(min = 4, max = 150, message = "JSR Validation - Project path must be between {2} and {1} characters.")
+	@Size(min = 4, max = 150, message = "JSR Validation - Project path must be between {min} and {max} characters.")
 	private String projectpath;
 	@NotEmpty(message = "JSR Validation - You must select a Project type.")
 	private String projecttechnology;
